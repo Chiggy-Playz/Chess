@@ -1,20 +1,20 @@
 import pygame
+from board import Board
 # Init here
 pygame.init()
 # Variables here
-# Width and height of the game
-width = 800
-height = 600
-# Colors here (Red,Green,Blue)
-white = (255,255,255)
-black = (0,0,0)
-# This will make the images load
-Pawn = pygame.image.load('white-pawn-md.png')
-PawnX = 400
-pawnY = 200
-def Pawn():
-    pygame.blip(Pawn,PawnX,pawnY)
-# End of variables and function defining
+
+
+width = 500
+height = 500
+WHITE = (255,255,255)
+BLACK = (0,0,0)
+RED = (255,0,0)
+BLUE = (0,255,0)
+GREEN = (0,0,255)
+board = Board()
+input(board.tiles)
+
 # Window of the game here
 window = pygame.display.set_mode((width,height))
 # Name of the game here
@@ -26,10 +26,8 @@ while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
-# This is to make the screen white
-    window.fill(white)
-    pygame.draw.rect(window,black,[500,100,20,100])
-    Pawn()
+
+    board.draw_tiles(window)
+    # pygame.draw.rect(window,(255,0,0),[0,0,400,400])
     pygame.display.update()
-# You also need this to quit for me
-pygame.quit()
+
