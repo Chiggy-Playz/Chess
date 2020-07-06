@@ -21,6 +21,8 @@ def whitepawn(whitepawnx,whitepawny):
     window.blit(Whitepawnimg,(whitepawnx,whitepawny))
 whitepawnx = (width*0.2)
 whitepawny = (height*0,4)
+
+
 Whitebishopimg = pygame.image.load('whitebishop.png')
 def whitebishop(whitebishopx,whitebishopy):
     window.blit(Whitebishopimg,(whitebishopx,whitebishopy))
@@ -83,6 +85,7 @@ def board(boardx,boardy):
     window.blit(boardimg,(boardx,boardy))
 boardx = (width * 0,2)
 boardy = (height * 0,4)
+boardimg = pygame.transform.scale(boardimg, (1000,800))
 # Main loop here
 running = True
 while running:
