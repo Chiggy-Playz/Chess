@@ -5,40 +5,18 @@ pygame.init()
 # Width and height of the window 
 width_window = 800
 height_window = 600
-# Width and height of the pawns
-width_whitepawn = 80
-height_whitepawn = 40
-width_whitebishop = 50
-height_whitebishop = 50
-width_whiteknight = 50
-height_whiteknight = 50
-width_whiterook = 50
-height_whiterook = 50
-width_whitequeen = 50
-height_whitequeen = 50
-width_whiteking = 50
-height_whiteking = 50
-# Now for the black pawns
-width_blackpawn = 60
-height_blackpawn = 50
-width_blackbishop = 50
-height_blackbishop = 50
-width_blackknight = 50
-height_blackknight = 50
-width_blackrook = 50
-height_blackrook = 50
-width_blackqueen = 50
-height_blackqueen = 50
-width_blackking = 50
-height_blackking = 50
+# Width and height of the pieces
+width_pieces = 80
+height_pieces = 40
 # Now for the images
 # This will load the images here
+
 whitepawnimg = pygame.image.load('whitepawn.png')
-Whitebishopimg = pygame.image.load('whitebishop.png')
-Whiteknightimg = pygame.image.load('whiteknight.png')
-Whiterookimg = pygame.image.load('whiterook.png')
-Whitequeenimg = pygame.image.load('whitequeen.png')
-Whitekingimg = pygame.image.load('whiteking.png')
+whitebishopimg = pygame.image.load('whitebishop.png')
+whiteknightimg = pygame.image.load('whiteknight.png')
+whiterookimg = pygame.image.load('whiterook.png')
+whitequeenimg = pygame.image.load('whitequeen.png')
+whitekingimg = pygame.image.load('whiteking.png')
 # Now for the black pieces
 blackpawnimg = pygame.image.load('blackpawn.png')
 blackbishopimg = pygame.image.load('blackbishop.png')
@@ -55,9 +33,31 @@ pygame.display.set_caption('Chess')
 # Here will have x and y of the pawns
 # You might have a question what is the difference uptop and here
 # Uptop is the size of the image here is where it's place in the window i hope that sorts the confusion
+def func(xory,number,widthorwindow,value):
+    whitepawn_xory_number = (widthorwindow*value)
 
-whitepawnx = (width_window*0.4)
-whitepawny = (height_window*0.78)
+whitepawnx1 = (width_window*0.4)
+whitepawny1 = (height_window*0.78)
+
+whitepawnx2 = (width_window*0,4)
+whitepawny2 = (height_window*0,2)
+
+whitepawnx3 = (width_window*0,2)
+whitepawny3 = (height_window*0,4)
+whitepawnx4 = (width_window*0,2)
+whitepawny4 = 1
+
+whitepawnx5 = (width_window*0,2)
+whitepawny5 = (height_window*0,4)
+
+whitepawnx6 = (width_window*0,5)
+whitepawny6 = (height_window*0,2)
+
+whitepawny7 = (width_window*0,2)
+whitepawnx7 = (height_window*0,2)
+
+whitepawny8 =(width_window*0,4)
+whitepawnx8 = (height_window*0,2)
 whitebishopx = (width_window*0.2)
 whitebishopy = (height_window*0.4)
 whiteknightx = (width_window*0.2)
@@ -70,7 +70,7 @@ whitequeenx = (width_window*0.2)
 whitequeeny = (height_window*0.4)
 whitekingx = (width_window*0.2)
 whitekingy = (height_window*0.4)
-# Now for the black pawns
+# Now for the black peices
 blackpawnx= (width_window*0.2)
 blackpawny = (height_window*0.4)
 blackbishopx= (width_window*0.2)
@@ -87,24 +87,35 @@ blackkingy = (height_window*0.4)
 boardx = (width_window * 0.0)
 boardy = (height_window * 0.0)
 # Now we need to use the function or the method to manipulate the placement
-whitepawnimg = pygame.transform.scale(whitepawnimg,(width_whitepawn,height_whitepawn))
-whitebishopimg = pygame.transform.scale(whitebishopimg,(width_whitebishop,height_whitebishop))
-whiteknightimg = pygame.transform.scale(whiteknightimg,(width_whiteknight,height_knight))
-whiterookimg = pygame.transform.scale(whiterookimg,(width_whiterook,height_whiterook))
-whitequeenimg = pygame.transform.scale(whitequeenimg,(width_whitequeen,height_whiterook))
-whitekingimg = pygame.transform.scale(whitekingimg,(width_blackking,height_whiteking))
+whitepawnimg = pygame.transform.scale(whitepawnimg,(width_pieces,height_pieces))
+whitebishopimg = pygame.transform.scale(whitebishopimg,(width_pieces,height_pieces))
+whiteknightimg = pygame.transform.scale(whiteknightimg,(width_pieces,height_pieces))
+whiterookimg = pygame.transform.scale(whiterookimg,(width_pieces,height_pieces))
+whitequeenimg = pygame.transform.scale(whitequeenimg,(width_pieces,height_pieces))
+whitekingimg = pygame.transform.scale(whitekingimg,(width_pieces,height_pieces))
 # Now for the black pawns
-blackpawnimg = pygame.transform.scale(blackpawnimg,(width_blackpawn,height_blackpawn))
-blackbishopimg = pygame.transform.scale(blackbishopimg,(width_whitebishop,height_blackbishop))
-blackknightimg = pygame.transform.scale(blackknightimg,(width_blackknight,height_blackknight))
-blackrookimg = pygame.transform.scale(blackrookimg,(width_blackrook,height_blackrook))
-blackqueenimg = pygame.transform.scale(blackqueenimg,(width_blackqueen,height_blackrook))
-blackkingimg = pygame.transform.scale(blackking,(width_blackking,height_blackking))
+blackpawnimg = pygame.transform.scale(blackpawnimg,(width_pieces,height_pieces))
+blackbishopimg = pygame.transform.scale(blackbishopimg,(width_pieces,height_pieces))
+blackknightimg = pygame.transform.scale(blackknightimg,(width_pieces,height_pieces))
+blackrookimg = pygame.transform.scale(blackrookimg,(width_pieces,height_pieces))
+blackqueenimg = pygame.transform.scale(blackqueenimg,(width_pieces,height_pieces))
+blackkingimg = pygame.transform.scale(blackkingimg,(width_pieces,height_pieces))
 # Now for the board
 boardimg = pygame.transform.scale(boardimg,(width_window,height_window))
 # Now for function of blit to show it to the screen
-def whitepawn(whitepawnx,whitepawny):
-    window.blit(whitepawnimg,(whitepawnx,whitepawny))
+
+def whitepawn(whitepawnx1,whitepawny1,whitepawnx2,whitepawny2,whitepawnx3,whitepawny3,whitepawnx4,
+whitepawnx5,whitepawny5,whitepawnx6,whitepawny6,whitepawnx7,whitepawny7,whitepawnx8,whitepawny8):
+    window.blit(whitepawnimg,(whitepawnx1,whitepawny1))
+    window.blit(whitepawnimg,(whitepawnx2,whitepawny2))
+    window.blit(whitepawnimg,(whitepawnx3,whitepawny3))
+    window.blit(whitepawnimg,(whitepawnx4,whitepawny4))
+    window.blit(whitepawnimg,(whitepawnx5,whitepawny5))
+    window.blit(whitepawnimg,(whitepawnx6,whitepawny6))
+    window.blit(whitepawnimg,(whitepawnx7,whitepawny7))
+    window.blit(whitepawnimg,(whitepawnx8,whitepawny8))
+
+    
 
 def whitebishop(whitebishopx,whitebishopy):
     window.blit(Whitebishopimg,(whitebishopx,whitebishopy))
@@ -149,6 +160,8 @@ while running:
         if event.type == pygame.QUIT:
                 running = False
     board(boardx,boardy)
+    whitepawn(whitepawnx1,whitepawny1)
+    whitepawn(whitepawnx1,whitepawny1)
     pygame.display.update()
 pygame.quit()
 quit()
