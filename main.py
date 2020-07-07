@@ -33,19 +33,16 @@ pygame.display.set_caption('Chess')
 # Here will have x and y of the pawns
 # You might have a question what is the difference uptop and here
 # Uptop is the size of the image here is where it's place in the window i hope that sorts the confusion
-def func(xory,number,widthorwindow,value):
-    whitepawn_xory_number = (widthorwindow*value)
-
 whitepawnx1 = (width_window*0.4)
 whitepawny1 = (height_window*0.78)
 
-whitepawnx2 = (width_window*0,4)
-whitepawny2 = (height_window*0,2)
+whitepawnx2 = (width_window*0,3)
+whitepawny2 = (height_window*0,8)
 
 whitepawnx3 = (width_window*0,2)
 whitepawny3 = (height_window*0,4)
 whitepawnx4 = (width_window*0,2)
-whitepawny4 = 1
+whitepawny4 = (height_window*0,5)
 
 whitepawnx5 = (width_window*0,2)
 whitepawny5 = (height_window*0,4)
@@ -105,7 +102,8 @@ boardimg = pygame.transform.scale(boardimg,(width_window,height_window))
 # Now for function of blit to show it to the screen
 
 def whitepawn(whitepawnx1,whitepawny1,whitepawnx2,whitepawny2,whitepawnx3,whitepawny3,whitepawnx4,
-whitepawnx5,whitepawny5,whitepawnx6,whitepawny6,whitepawnx7,whitepawny7,whitepawnx8,whitepawny8):
+    whitepawny4,whitepawnx5,whitepawny5,whitepawnx6,whitepawny6,whitepawnx7,whitepawny7,whitepawnx8,
+    whitepawny8):
     window.blit(whitepawnimg,(whitepawnx1,whitepawny1))
     window.blit(whitepawnimg,(whitepawnx2,whitepawny2))
     window.blit(whitepawnimg,(whitepawnx3,whitepawny3))
@@ -160,8 +158,10 @@ while running:
         if event.type == pygame.QUIT:
                 running = False
     board(boardx,boardy)
-    whitepawn(whitepawnx1,whitepawny1)
-    whitepawn(whitepawnx1,whitepawny1)
+    whitepawn(whitepawnx1,whitepawny1,whitepawnx2,whitepawny2,whitepawnx3,whitepawny3,whitepawnx4,
+    whitepawny4,whitepawnx5,whitepawny5,whitepawnx6,whitepawny6,whitepawnx7,whitepawny7,whitepawnx8,
+    whitepawny8)
+
     pygame.display.update()
 pygame.quit()
 quit()
