@@ -44,7 +44,7 @@ whitepawny2 = (460)
 
 whitepawnx3 = (210)
 whitepawny3 = (460)
-
+ 
 whitepawnx4 = (310)
 whitepawny4 = (460)
 
@@ -57,7 +57,7 @@ whitepawny6 = (460)
 whitepawny7 = (610)
 whitepawnx7 = (460)
 
-whitepawny8 =(710)
+whitepawny8 = (710)
 whitepawnx8 = (460)
 whitebishopx = (width_window*0.2)
 whitebishopy = (height_window*0.4)
