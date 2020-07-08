@@ -1,3 +1,4 @@
+
 import pygame
 # Init here
 pygame.init()
@@ -33,28 +34,31 @@ pygame.display.set_caption('Chess')
 # Here will have x and y of the pawns
 # You might have a question what is the difference uptop and here
 # Uptop is the size of the image here is where it's place in the window i hope that sorts the confusion
-whitepawnx1 = (width_window*0.4)
-whitepawny1 = (height_window*0.78)
+# Probably gonna use this later
+# from the left to right
+whitepawnx1 = (10)
+whitepawny1 = (460)
 
-whitepawnx2 = (width_window*0,3)
-whitepawny2 = (height_window*0,8)
+whitepawnx2 = (110)
+whitepawny2 = (460)
 
-whitepawnx3 = (width_window*0,2)
-whitepawny3 = (height_window*0,4)
-whitepawnx4 = (width_window*0,2)
-whitepawny4 = (height_window*0,5)
+whitepawnx3 = (210)
+whitepawny3 = (460)
 
-whitepawnx5 = (width_window*0,2)
-whitepawny5 = (height_window*0,4)
+whitepawnx4 = (310)
+whitepawny4 = (460)
 
-whitepawnx6 = (width_window*0,5)
-whitepawny6 = (height_window*0,2)
+whitepawnx5 = (410)
+whitepawny5 = (460)
 
-whitepawny7 = (width_window*0,2)
-whitepawnx7 = (height_window*0,2)
+whitepawnx6 = (510)
+whitepawny6 = (460)
 
-whitepawny8 =(width_window*0,4)
-whitepawnx8 = (height_window*0,2)
+whitepawny7 = (610)
+whitepawnx7 = (460)
+
+whitepawny8 =(710)
+whitepawnx8 = (460)
 whitebishopx = (width_window*0.2)
 whitebishopy = (height_window*0.4)
 whiteknightx = (width_window*0.2)
